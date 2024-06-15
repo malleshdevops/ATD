@@ -7,6 +7,9 @@ pipeline{
   tools {
         maven 'maven19' 
     }
+ triggers {
+        cron('* * * * *')
+    }
 parameters {
         string(name: 'BRANCH', defaultValue: 'future', description: 'Please specify the branch')
 
