@@ -23,7 +23,7 @@ parameters {
     }
   stages{
 	stage('build'){
-     
+        when { branch 'master' }
 	  steps{
 	   sh 'mvn -f $WORKSPACE/ATD_Multi-Insurance-Services/pom.xml clean package'
 	  }
